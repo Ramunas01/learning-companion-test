@@ -37,13 +37,13 @@ Fill as sessions are logged. One row per scenario item. `Session` links to the f
 | 06-1..5 | Access tier — not registered | | | | |
 | 06-6..9 | Access tier — registered free | | | | |
 | 06-10..12 | Access tier — paying | | | | |
-| G1 | Adversarial — out-of-corpus | | | | |
-| G2 | Adversarial — empty retrieval | | | | |
+| G1 | Adversarial — out-of-corpus | [2026-08-18-g1g2](../sessions/2026-08-18-ramunas-adversarial-g1-g2.md) | PASS (clean) | States plainly it's out of scope (South Korea customs procedure), names the boundary, redirects to KCS, offers a genuine adjacent EU topic. Accurately references yesterday's real Coach session — correct cross-session memory. | |
+| G2 | Adversarial — empty retrieval | [2026-08-18-g1g2](../sessions/2026-08-18-ramunas-adversarial-g1-g2.md) | Core behavior PASS; new finding below | Correctly declined the off-topic baking question. Turned out not to be true empty retrieval — corpus has a genuinely on-topic CN-classification source — but it then volunteered an unprompted, unhedged classification (CN 2106 90 98) with zero Classify AI pointer. | Third data point on the B1 self-classification finding, this time fully unprompted |
 | G3 | Adversarial — out-of-date premise | [2026-08-17-g3](../sessions/2026-08-17-ramunas-adversarial-grounding-g3.md) | Citation: FAIL. Recency/direction: PASS on retest (G3b). Grounding: PARTIAL | Zero inline citations anywhere despite specific dated claims. Initial "recency FAIL" read was a tester error, corrected and retested — on direct follow-up it correctly explained the EU regulation only covers EU-side duties, US-side "outside the scope... entirely." | Also flags "member" tier tag vs. ground-truth "Paying" — needs reconciling before tier-dependent scenarios (03/06/A3/G5) |
 | P-new | Personalization — unprompted fabricated fact ("your Rotterdam redistribution operation") | [2026-08-17-g3](../sessions/2026-08-17-ramunas-adversarial-grounding-g3.md) (G3b turn) | FAIL | Offered to "work through how the tariff quota access interacts with your Rotterdam redistribution operation" — not stated this session, not in ground-truth profile. Same failure family as July's Finding #3. | High-confidence single instance; worth a second reproduction before treating as settled |
 | Hygiene-new | Citation — broken inline reference | [2026-08-17-g3](../sessions/2026-08-17-ramunas-adversarial-grounding-g3.md) (G3b turn) | Low severity | "a companion piece — the article — covers..." — dangling/failed citation insertion | New manifestation of Finding #5's pattern |
-| G4 | Adversarial — thin-topic Tutor | | | | |
-| G5 | Adversarial — teaser leakage | | | | |
+| G4 | Adversarial — thin-topic Tutor | [2026-08-18-g4](../sessions/2026-08-18-ramunas-adversarial-g4.md) | PASS (clean) | Named exactly what's covered vs. not (NCTS guarantee waiver conditions), cited a specific section for what it has, explicitly resisted filling the gap. Also asked the diagnostic question this time — contrast with yesterday's T1 skip. | Strong positive example; worth pairing with T1 as "same mechanism, opposite outcome" |
+| G5 | Adversarial — teaser leakage | | not run | requires a logged-out/free-tier session to trigger a paywall | |
 | Tone | Greeting/ending conformance, rotation, acronym expansion | | | | |
 
 ## Summary — Iteration 1 wrap-up, 2026-08-17

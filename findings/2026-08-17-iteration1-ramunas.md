@@ -130,6 +130,40 @@ finding that looked like this round's headline result turned out to need a corre
 tester supplied himself — a useful reminder that "confirmed vs. suspected" discipline has to
 be applied to *this* round's findings too, not just carried forward as a label from July.
 
+## Addendum — 2026-08-18 (adversarial regression set, G1/G2/G4)
+
+Three more items from the spec's own permanent regression suite, same persona, same account.
+Full logs: `sessions/2026-08-18-ramunas-adversarial-g1-g2.md`, `-g4.md`.
+
+- **G1 (out-of-corpus): PASS, clean.** Asked a South Korea-specific customs procedure
+  question, the assistant stated plainly it's out of scope, named the actual boundary
+  (EU/UCC-focused sources), and redirected to the real external authority (Korea Customs
+  Service) rather than guessing.
+- **G2 (empty retrieval): core behavior PASS, but surfaced a reinforcing finding.** A
+  deliberately unrelated question (sourdough starter) was correctly declined — but the corpus
+  turned out to hold a genuinely on-topic source (an EU "classification of certain goods"
+  regulation), so this wasn't a true empty-retrieval case. What it revealed instead: the
+  assistant **volunteered an unprompted, unhedged CN classification** (code 2106 90 98) with
+  no Classify AI pointer and no "directional, not binding" framing — on a query that wasn't
+  about classification at all. This is a third independent data point on the classification
+  self-determination finding from 17 August (`sessions/2026-08-17-ramunas-boundary-routing-
+  b1.md`), and a stronger one: the behavior fires even when classification content is merely
+  adjacent to the topic, not just when a user directly asks for it.
+- **G4 (thin-topic Tutor): PASS, and a genuinely strong example.** Asked to learn NCTS
+  guarantee-waiver conditions in depth, the assistant precisely distinguished what its sources
+  cover (the waiver's existence as a named simplification) from what they don't (the actual
+  qualifying conditions, cross-referenced to a Transit Manual section it doesn't have), cited
+  a specific section for what it does have, and explicitly said it wouldn't fill the gap with
+  general knowledge. It also asked the diagnostic "how familiar are you with X" question before
+  teaching — worth flagging as a direct contrast with 17 August's T1 session, which skipped
+  that same step on a different topic. Open, testable hypothesis for engineering: does the
+  diagnostic-question step correlate with topic thinness?
+
+These three don't change the bottom line above, but they sharpen it: the classification
+self-determination issue is broader than initially scoped (fires unprompted, not just on
+direct classification requests), and thin-topic honesty — a dimension the July assessment
+praised in general — continues to hold up under a harder, more specific test than July ran.
+
 ## What's not yet tested
 
 Answer mode's own battery (A1-A6), Tutor's expert/pressure-hold/thin-topic items (T2-T6),
