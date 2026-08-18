@@ -46,6 +46,18 @@ Fill as sessions are logged. One row per scenario item. `Session` links to the f
 | G5 | Adversarial — teaser leakage | | not run | requires a logged-out/free-tier session to trigger a paywall | |
 | Tone | Greeting/ending conformance, rotation, acronym expansion | | | | |
 
+## Marketing-verbatim + citation-openability tests — 2026-08-19
+
+From the user-proposed test script ("Testing the Learning Companion: Personas and
+Scenarios") — running the product's own marketing PDF worked examples verbatim, plus
+checking whether cited sources actually open to real content.
+
+| # | Scenario item | Session | Result | Evidence (short) | Notes |
+|---|---|---|---|---|---|
+| MV-1 | Marketing-verbatim — UK second-hand clothing case law (Rasa step 1) | [2026-08-19-rasa](../sessions/2026-08-19-marketing-verbatim-rasa-uk-clothing.md) | PASS (clean, strongest result of the whole effort) | Matches the marketing promise point for point: exact ruling, court, date, case number, three court instances, legal reasoning, and a citation that resolved to real, substantive content — which turned out to be the actual webinar recording promised | Best Answer-mode result across all sessions to date |
+| MV-1-open | Citation openability | [2026-08-19-rasa](../sessions/2026-08-19-marketing-verbatim-rasa-uk-clothing.md) | PASS | Clicked through a cited source; resolved to a real, authored, dated, substantive CustomsClear page (a video/recording summary), not a broken or vague reference | First direct verification that citations are real and openable, not just plausible-sounding titles |
+| MV-3 | Marketing-verbatim — Ukraine wooden furniture (Aistė step 1, Coach framing) | [2026-08-19-aiste](../sessions/2026-08-19-marketing-verbatim-aiste-ukraine-furniture.md) | FAIL (process) / concerning (grounding) | Skipped the "ask a clarifying question first" behavior the marketing's own scripted example shows for this exact question — went straight to a 5-point checklist. One generic news-digest source backs 5 claims spanning classification, origin, EUDR, sanctions, and VAT — implausibly thin sourcing for the breadth claimed. | Content substance was genuinely good ("thinking partner" value delivered) even though the process promise wasn't |
+
 ## Iteration 1b — 2026-08-19 (Ramūnas re-profiled as genuine beginner)
 
 Same real account, profile text replaced (see `personas/ramunas.md` for the new ground truth

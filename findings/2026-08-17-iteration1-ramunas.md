@@ -213,6 +213,43 @@ round's writeup to Šarūnas with this finding — it's the most concretely acti
 produced so far, precisely because the assistant's own words supply the causal explanation
 that every other grounding finding in this effort has had to guess at from outside.
 
+## Addendum — 2026-08-19, second batch (marketing-verbatim examples + citation-openability)
+
+Drawn from an independently-written test script the account holder sourced separately, run
+against the product's own marketing PDF worked examples. Full logs: `sessions/2026-08-19-
+marketing-verbatim-rasa-uk-clothing.md`, `-aiste-ukraine-furniture.md`.
+
+**Strongest single result of the entire testing effort.** Asked the exact question from the
+marketing PDF's Answer-mode example (a UK second-hand-clothing preferential-origin dispute),
+the response matched the marketing promise point for point: the exact ruling, court, date, and
+even a case number the marketing text didn't specify; all three court instances named
+correctly; sophisticated, accurate legal reasoning including an independent evidentiary ground
+and a specific TCA article citation. Clicking through the cited source confirmed it resolves to
+real, substantive, correctly-attributed content — and turned out to be the actual webinar
+recording the marketing text promised ("the articles and webinar where our experts analyse
+it"), not a generic article. This is the first time in this test effort a citation was directly
+verified as genuinely openable rather than just topically plausible by title, and it passed
+cleanly.
+
+**A second marketing-verbatim test, the Ukraine wooden-furniture Coach-mode example, was more
+mixed.** The marketing PDF's own scripted response to this exact question asks a clarifying
+question before answering ("Where are you importing into...?"). This response skipped that
+entirely, going straight to a five-point checklist — though it did legitimately draw the
+destination market from the account's own stable profile field rather than asking blindly,
+a partial mitigation worth noting. More concerning: the five points span tariff classification,
+origin documentation, the EU Deforestation Regulation, a sanctions cross-check, and Lithuanian
+VAT mechanics — five distinct regulatory domains — backed by exactly one checked source, a
+generic monthly news digest unlikely to substantiate more than one of those five points. This
+reads as the same "confident answer, thin grounding" pattern found in the classification
+routing finding, now at a larger scale (one multi-domain answer, one weak citation) rather than
+a single overreaching claim. On the positive side, the substantive content did deliver on the
+"thinking partner" promise — the EUDR and sanctions points are genuinely the kind of thing an
+experienced colleague would flag unprompted.
+
+**New standing check worth adding going forward:** verify citation openability, not just title
+relevance, on at least one source per session — cheap to do and it's the first check in this
+effort that produces a clean, unambiguous "real or not" answer rather than a judgment call.
+
 ## What's not yet tested
 
 Answer mode's own battery (A1-A6), Tutor's expert/pressure-hold/thin-topic items (T2-T6),
