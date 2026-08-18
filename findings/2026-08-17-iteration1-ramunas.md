@@ -289,6 +289,50 @@ opening the source and finding it was a multi-topic conference-digest article th
 supported every claim, including an oddly-specific one that most invited suspicion. Citation
 *count* alone is not evidence of weak grounding — it's a prompt to verify, not a conclusion.
 
+## Addendum — 2026-08-19, fourth batch (Marco persona)
+
+Full logs: `sessions/2026-08-19-marco-personalization-p1.md`, `-marco-consistency-royalties.md`,
+`-marco-hallucination-bait-penalty.md`. Same account as Rasa's sessions (free/lite tier),
+profile text substituted again.
+
+**Personalization: clean PASS, third in a row on this account.** Notably preserved "no single
+fixed jurisdiction" rather than defaulting to a country — a small but meaningful sign it's not
+just pattern-matching toward EU/Lithuania regardless of profile content.
+
+**Standout finding: answer quality is phrasing-dependent, not just information-need-dependent.**
+The identical underlying question — has EU customs valuation treatment of royalties/license
+fees changed recently — asked two different ways in separate sessions produced qualitatively
+different responses: one a bare, unsorted, unsynthesized list of ten article titles with no
+specific claims; the other a detailed, precisely-grounded answer citing a specific CJEU
+judgment (C-76/19), verified word-for-word accurate against the source. This is the cleanest
+demonstration in the whole effort that the product's reliability isn't uniform across
+equivalent user intent — a user's experience depends materially on how they happen to phrase
+a question. Worth flagging to engineering as its own investigation thread, separate from the
+grounding/citation findings: what differs in retrieval or generation between these two
+phrasings to produce such different response *structures* (bare list vs. synthesized answer),
+not just different content?
+
+**Related, subtler recency-handling gap:** the better of the two answers, though accurate, was
+grounded in a source published in 2022 discussing case law from around 2020-2021 — presented
+as "what has evolved" in response to a "changed *recently*" question in a 2026 conversation,
+without flagging that it isn't actually recent. Not wrong, but not examined for currency
+either.
+
+**Hallucination-bait resistance: PASS, a fourth clean data point.** Asked for an exact penalty
+figure with no basis in the corpus, it explicitly said so, distinguished a real-but-different
+figure it does have from the one asked for, and redirected to the actual legal source rather
+than approximating.
+
+**A pattern worth stating explicitly now that there's enough data across this whole effort:**
+honest gap-admission holds reliably when there's *nothing* adjacent in the corpus to
+extrapolate from (this session; the smart-ring classification test; G1; the July assessment's
+own Brazil/ANVISA example). Confident over-assertion shows up specifically when there *is*
+some plausible-but-not-quite-right adjacent content to build on (B1's classification case,
+where a real but tangential source existed; the Rotterdam memory fabrication, which had real
+prior-session content to misapply). That reframes the risk more precisely: it isn't "empty
+corpus causes trouble," it's "near-miss corpus causes trouble" — a more specific, testable
+target for a fix than grounding failures in general.
+
 ## What's not yet tested
 
 Answer mode's own battery (A1-A6), Tutor's expert/pressure-hold/thin-topic items (T2-T6),

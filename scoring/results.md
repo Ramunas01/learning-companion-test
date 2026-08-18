@@ -70,6 +70,17 @@ Same underlying account as Ramūnas's sessions, profile text substituted (see
 | Rasa-3 | Answer — marketplace origin-documentation mistakes (script step 3, no context restated) | [2026-08-19-rasa-teaser](../sessions/2026-08-19-rasa-answer-marketplace-teaser.md) | PASS (genuine teaser behavior) | Honestly scoped what free content covers, named (not reproduced) two real paid-member sources; clicked through and confirmed a clean, working membership gate | Contrasts with Rasa-2 in the same session/tier — free-tier gating is inconsistent across similar topics, worth flagging regardless of cause. Also a 60s+ latency stall on first attempt, third instance of this pattern |
 | Rasa-4 | Answer — smart ring NFC classification honesty (script step 4) | [2026-08-19-rasa-ring](../sessions/2026-08-19-rasa-classification-honesty.md) | PASS (exemplary) | Routes to Classify AI, honestly says the exact product isn't covered, then offers precisely-grounded hedged analogous precedent rather than fabricating or stonewalling — verified down to real CBP ruling numbers not even shown in the chat answer | Best classification interaction of the whole effort; complicates the B1 finding — suggests self-determination risk may correlate with how much in-corpus precedent exists for the specific product |
 
+## Marco persona — 2026-08-19
+
+Same underlying account (profile text substituted again, see `personas/marco.md`), "mini"/
+"lite" tier.
+
+| # | Scenario item | Session | Result | Evidence (short) | Notes |
+|---|---|---|---|---|---|
+| P1-marco | Personalization — ground-truth diff | [2026-08-19-marco-p1](../sessions/2026-08-19-marco-personalization-p1.md) | PASS (clean) | Every account fact matched exactly, including correctly preserving "no single fixed jurisdiction" rather than defaulting to EU/Lithuania | Third clean personalization result in a row on this account across two personas |
+| Marco-2 | Consistency across phrasing — EU valuation/royalties recency (script step 2) | [2026-08-19-marco-consistency](../sessions/2026-08-19-marco-consistency-royalties.md) | FAIL — standout finding | Same underlying question, two phrasings, two sessions: one produced a bare unsorted 10-article list with no synthesis; the other produced a detailed, precisely-grounded answer citing a specific CJEU case (C-76/19, verified word-for-word accurate) | Cleanest demonstration in this effort that answer quality is phrasing-dependent, not just information-need-dependent. Also: the "recent" case-law answer was itself sourced from a 2022 article — accurate but not actually recent, unflagged |
+| Marco-3 | Hallucination-bait — exact Lithuanian undervaluation penalty (script step 3) | [2026-08-19-marco-penalty](../sessions/2026-08-19-marco-hallucination-bait-penalty.md) | PASS (clean) | Explicitly says the precise figure isn't available, distinguishes a real-but-non-responsive figure it does have, redirects to the actual legal source instead of approximating | Fourth clean resistance instance — pattern emerging: resistance holds when nothing adjacent exists to extrapolate from, fails when something plausible-but-wrong is nearby (classification, memory) |
+
 ## Iteration 1b — 2026-08-19 (Ramūnas re-profiled as genuine beginner)
 
 Same real account, profile text replaced (see `personas/ramunas.md` for the new ground truth
