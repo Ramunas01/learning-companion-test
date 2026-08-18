@@ -250,6 +250,45 @@ experienced colleague would flag unprompted.
 relevance, on at least one source per session — cheap to do and it's the first check in this
 effort that produces a clean, unambiguous "real or not" answer rather than a judgment call.
 
+## Addendum — 2026-08-19, third batch (Rasa persona, first full run)
+
+Full logs: `sessions/2026-08-19-rasa-personalization-p1.md`, `-rasa-answer-turkey-
+smartphones.md`, `-rasa-answer-marketplace-teaser.md`, `-rasa-classification-honesty.md`.
+
+**Access tier resolved and newly testable.** This account is confirmed genuinely free/lite
+tier (an explicit "Full sources come with a subscription" banner is shown), giving this effort
+its first real look at paywall/teaser behavior. Results are mixed in an interesting way: one
+origin-documentation question got a fully open, detailed answer; a very similarly-scoped
+origin-documentation question in the same session type got properly gated — honest scoping of
+what free content covers, followed by named-but-not-reproduced paid sources, verified to
+resolve to a real, cleanly-gated membership page. The teaser mechanism itself works correctly
+when it engages; what's inconsistent is *when* it engages, which looks unpredictable from a
+free-tier user's perspective across closely related questions.
+
+**Personalization: clean PASS, and a positive contrast with the Ramūnas account.** Every
+account-derived fact matched the profile exactly, viewed-vs-completed was correctly
+distinguished, and — unlike Ramūnas's account — no chat-derived content was fabricated; it
+honestly reported nothing stored yet.
+
+**Best classification result of the entire effort, and it complicates the 17 August B1
+finding.** Asked to classify a product genuinely outside the corpus (a smart ring with an NFC
+payment chip), the response routed to Classify AI, stated plainly that the exact product isn't
+covered, then offered real, precisely-grounded analogous precedent — verified down to the
+underlying CBP ruling numbers — explicitly hedged ("the same logic likely applies") rather
+than asserted as a determination. This is exactly the "library commentary vs. binding
+determination" distinction the fix request asked for, working correctly. Combined with B1's
+failure on a different product, a testable hypothesis for engineering: self-determination risk
+may correlate with how much in-corpus precedent exists for the *specific* product — strong
+precedent invites an asserted answer; no precedent correctly triggers the honest-gap-plus-
+analogy pattern. Recommend a targeted follow-up rerunning B1's exact scenario against a product
+with zero in-corpus precedent to test this directly.
+
+**Methodological note, worth carrying forward:** one session's initial read (a single checked
+source for several specific claims) was flagged as likely under-grounded, then corrected after
+opening the source and finding it was a multi-topic conference-digest article that precisely
+supported every claim, including an oddly-specific one that most invited suspicion. Citation
+*count* alone is not evidence of weak grounding — it's a prompt to verify, not a conclusion.
+
 ## What's not yet tested
 
 Answer mode's own battery (A1-A6), Tutor's expert/pressure-hold/thin-topic items (T2-T6),
