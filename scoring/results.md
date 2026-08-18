@@ -58,6 +58,15 @@ checking whether cited sources actually open to real content.
 | MV-1-open | Citation openability | [2026-08-19-rasa](../sessions/2026-08-19-marketing-verbatim-rasa-uk-clothing.md) | PASS | Clicked through a cited source; resolved to a real, authored, dated, substantive CustomsClear page (a video/recording summary), not a broken or vague reference | First direct verification that citations are real and openable, not just plausible-sounding titles |
 | MV-3 | Marketing-verbatim — Ukraine wooden furniture (Aistė step 1, Coach framing) | [2026-08-19-aiste](../sessions/2026-08-19-marketing-verbatim-aiste-ukraine-furniture.md) | FAIL (process) / concerning (grounding) | Skipped the "ask a clarifying question first" behavior the marketing's own scripted example shows for this exact question — went straight to a 5-point checklist. One generic news-digest source backs 5 claims spanning classification, origin, EUDR, sanctions, and VAT — implausibly thin sourcing for the breadth claimed. | Content substance was genuinely good ("thinking partner" value delivered) even though the process promise wasn't |
 
+## Rasa persona — 2026-08-19
+
+Same underlying account as Ramūnas's sessions, profile text substituted (see
+`personas/rasa.md`). First session run:
+
+| # | Scenario item | Session | Result | Evidence (short) | Notes |
+|---|---|---|---|---|---|
+| P1-rasa | Personalization — ground-truth diff | [2026-08-19-rasa-p1](../sessions/2026-08-19-rasa-personalization-p1.md) | PASS (clean) | Every account-derived fact matched exactly, correctly distinguished viewed vs. completed, honestly reported no chat-derived memory instead of fabricating anything | Sharp contrast with the Ramūnas account's memory-bleed findings. Tier indicator showed "mini"/"lite" here, not "member" like every other session — open question, flag to Šarūnas alongside the tier-tag mismatch |
+
 ## Iteration 1b — 2026-08-19 (Ramūnas re-profiled as genuine beginner)
 
 Same real account, profile text replaced (see `personas/ramunas.md` for the new ground truth
