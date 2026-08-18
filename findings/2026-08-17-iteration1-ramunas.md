@@ -164,6 +164,55 @@ self-determination issue is broader than initially scoped (fires unprompted, not
 direct classification requests), and thin-topic honesty — a dimension the July assessment
 praised in general — continues to hold up under a harder, more specific test than July ran.
 
+## Addendum — 2026-08-19 (re-profiled beginner persona — the standout result of the whole effort)
+
+Ramūnas replaced his own profile text on the platform, deliberately changing only experience
+level (genuine beginner, no stated business or sanctions specialization) while holding
+jurisdiction, tone, and access tier constant against the 17 August persona. Full log:
+`sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md`.
+
+**Finding #4 (diagnostic-skip), now unambiguous.** Asked to learn tariff classification "from
+the basics" as a genuine beginner with no stated expertise anywhere in the profile, the
+assistant again skipped the diagnostic question and taught immediately. 17 August's version of
+this finding required picking a topic outside the persona's stated interests to stay honest to
+a "beginner framing on an otherwise expert profile" — that judgment call is no longer needed.
+This is as clean a confirmation as the test can produce.
+
+**New finding, arguably the most important of the whole effort: confirmed, self-admitted
+cross-session memory bleed.** Mid-lesson, the assistant stated as fact that the user is
+"shipping e-commerce parcels into the EU with 3–4 product types per consignment." That exact
+detail is verbatim from a *different* test session run the day before, against the *old*
+expert persona, in an unrelated Coach-mode pricing exercise
+(`sessions/2026-08-17-ramunas-coach-mode-c3.md`) — nothing resembling it exists anywhere in the
+new profile or in this conversation. Challenged directly, the assistant's own explanation
+confirmed the mechanism: **"I was pulling in context from earlier conversations that isn't
+relevant right now."** This resolves 17 August's open P6 question (bleed vs. confabulation,
+which that day's findings could only leave as "needs account chat-history access to settle")
+in the direction Ramūnas himself suspected for the Rotterdam finding: this is real
+prior-session content, misapplied to a context it has nothing to do with — not invention from
+nothing. It also demonstrates that changing the platform-side profile text does **not**
+reconcile or reset whatever store holds chat-derived conversational context; stale, wrong
+content from a fully separate scenario surfaced unprompted and stated as settled fact rather
+than offered tentatively.
+
+**One genuine improvement, worth stating plainly alongside the severe finding:** correction
+handling here was clean. Challenged, the assistant acknowledged immediately ("Fair point... I
+was pulling in context that isn't relevant"), didn't argue, and didn't fabricate a justifying
+provenance story — a real contrast with 17 August's escalation pattern (inventing "coaching
+sessions dated 2026-07-22" when pushed on the Rotterdam claim). The problem is specifically
+what gets surfaced unprompted, not how the system responds once challenged.
+
+**Latency issue upgraded from single data point to confirmed pattern.** A second, independent
+"what do you know about me?" query stalled with no response for 70+ seconds — same signature
+as 17 August's Attempt 1. Worth engineering attention as its own item.
+
+**Practical fix implication:** whatever mechanism decides which "earlier conversation" content
+to surface into a new session needs either relevance/topic gating before stating it as
+established fact, reconciliation against profile changes, or both. Recommend leading the next
+round's writeup to Šarūnas with this finding — it's the most concretely actionable one
+produced so far, precisely because the assistant's own words supply the causal explanation
+that every other grounding finding in this effort has had to guess at from outside.
+
 ## What's not yet tested
 
 Answer mode's own battery (A1-A6), Tutor's expert/pressure-hold/thin-topic items (T2-T6),

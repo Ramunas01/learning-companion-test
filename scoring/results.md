@@ -46,6 +46,20 @@ Fill as sessions are logged. One row per scenario item. `Session` links to the f
 | G5 | Adversarial — teaser leakage | | not run | requires a logged-out/free-tier session to trigger a paywall | |
 | Tone | Greeting/ending conformance, rotation, acronym expansion | | | | |
 
+## Iteration 1b — 2026-08-19 (Ramūnas re-profiled as genuine beginner)
+
+Same real account, profile text replaced (see `personas/ramunas.md` for the new ground truth
+and what changed). One session logged:
+[2026-08-19](../sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md) — Tutor T1
+re-test + an unplanned but major cross-session memory-bleed finding.
+
+| # | Scenario item | Session | Result | Evidence (short) | Notes |
+|---|---|---|---|---|---|
+| T1-rerun | Tutor — beginner diagnostic, unambiguous persona this time | [2026-08-19](../sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md) | FAIL, cleanly confirmed | Skipped the diagnostic question again, this time with no "home turf" ambiguity possible — persona has no stated expertise anywhere | Cleanest possible confirmation of Finding #4's first half |
+| P-bleed | Memory — cross-session bleed, self-admitted | [2026-08-19](../sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md) | FAIL, severe, confirmed not suspected | Stated as fact that the user is "shipping e-commerce parcels... 3-4 product types per consignment" — verbatim from a different persona's Coach session the day before. Assistant's own words on challenge: "I was pulling in context from earlier conversations that isn't relevant right now." | Resolves the open "bleed vs confabulation" question from 2026-08-17 — this is real prior content, misapplied, not invention |
+| P4-rerun | Correction handling | [2026-08-19](../sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md) | PASS | Acknowledged the error plainly on challenge, no argument, no fabricated justification — contrast with 2026-08-17's escalation pattern | Genuine positive alongside the severe finding above |
+| Latency | Personalization-read stall | [2026-08-19](../sessions/2026-08-19-ramunas-beginner-tutor-t1-memory-bleed.md) | Reproduces | Second independent "what do you know about me?" hang (70+s, no response) | Now a confirmed pattern, not a one-off |
+
 ## Summary — Iteration 1 wrap-up, 2026-08-17
 
 Full narrative findings write-up: `../findings/2026-08-17-iteration1-ramunas.md`. Tally below
